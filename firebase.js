@@ -207,14 +207,14 @@ $(document).ready(function () {
 
   //FUNCIONES
   function obtenerDatos() {
-    db.collection("posteos").get().then((querySnapshot) => {
+    db.collection("Publicaciones").get().then((querySnapshot) => {
       mostrarDatos(querySnapshot.docs);
     });
 
   }
 
   function actualizarDato(id) {
-    db.collection("posteos").doc(id).get().then((doc) => {
+    db.collection("Publicaciones").doc(id).get().then((doc) => {
       //Si exite el post se mostara en el form
       let post = doc.data();
 
@@ -230,13 +230,13 @@ $(document).ready(function () {
 
     const user = firebase.auth().currentUser;
 
-    console.log(user.uid, user.displayName);
-    
+    console.log("publicaciones");
+
     db.collection("Publicaciones").add({
 
       _publicacion: post,
       _idUser: user.uid,
-        _nombreUser: user.displayName,
+      _nombreUser: user.displayName,
     })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -245,7 +245,7 @@ $(document).ready(function () {
         var errorCode = error.code;
         var errorMessage = error.message;
 
-        console.error("Error adding document: ",errorCode, errorMessage);
+        console.error("Error adding document: ", errorCode, errorMessage);
       });
   });
 
@@ -268,12 +268,7 @@ $(document).ready(function () {
           <div class="card-body">
             <p>${post._publicacion}</p>
             <p>Publicado por ${post._nombreUser}</p>
-            <button class="btn btn-primary" data-id="${doc._idUser}">
-              Editar
-            </button>
-            <button class="btn  btn-danger" data-id="${doc._idUser}">
-              Eliminar
-            </button>
+            
           </div>
         </div>
         `;
