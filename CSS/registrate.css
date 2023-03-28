@@ -1,0 +1,25 @@
+body {
+    /* background-image: url(https://a-static.besthdwallpaper.com/landscape-scenery-art-wallpaper-3440x1440-80888_15.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+background-image: url(https://images.pexels.com/photos/15851335/pexels-photo-15851335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+
+    /* background-attachment: fixed  scroll; */
+}
+
+.form-reg {
+
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.568);
+    border-radius: 10px;
+    padding: 20px;
+    width: 450px;
+    height: auto;
+}
+
+.posicion { 
+margin-top: 60px;
+    /* background-color: rgb(198, 233, 233); */
+ display: flex;
+ justify-content: center;
+align-items: center; 
+}

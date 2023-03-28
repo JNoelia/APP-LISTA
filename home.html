@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/home.css">
+  <title>home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="logo">
+          <img src="https://borrandodiferencias.org/wp-content/uploads/2019/03/musicoterapia.jpg" alt="">
+        </div>
+        <a class="navbar-brand">BIENVENID@</a>
+        <form class="d-flex" role="search">
+          <button class="btn btn-light" id="salir" type="submit">Cerrar sesion</button>
+        </form>
+      </div>
+    </nav>
+
+
+  </header>
+  <br><br>
+
+
+  <main>
+
+    <div id="userInfo">
+      <div></div>
+    </div>
+    <!-- Button para actulizar datos como el nombre del usuario -->
+    <!-- <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        OPCIONES
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><button class="dropdown-item" id="actualizar_nombre">Actualizar nombre</button></li>
+        <li><a class="dropdown-item" href="#">Algo mas aquí</a></li>
+      </ul>
+    </div> -->
+
+    <div class="container">
+      <!-- <p>¿Cómo te sientes el día de hoy?</p>
+      <div class="input-group mb-3">
+        <select class="form-select" id="inputGroupSelect01">
+          <option selected>Seleccione aquí</option>
+          <option value="1">Me siento excelente</option>
+          <option value="2">Me siento bien</option>
+          <option value="3">Me siento mal</option>
+        </select>
+      </div> -->
+      
+      <p>¿Qué deseas publicar?</p>
+      <div class="form-floating" id="form_post">
+        <textarea class="form-control" id="texto" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Escribe un comentario</label>
+      </div>
+      <br>
+      <button class="btn btn-secondary" id="publicar">Publicar</button>
+      <br><br>
+
+      <div class="container my5">
+
+        <div id="post">
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <!-- links firebase     -->
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="firebase.js"></script>
+</body>
+
+</html>
